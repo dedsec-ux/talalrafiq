@@ -43,37 +43,56 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="hero" className="pt-20 pb-16 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hero" className="pt-20 pb-16 bg-gradient-to-br from-background via-muted to-background relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-4">
-              Hi, I'm <span className="text-primary">{profile.name}</span>
+          <div className="flex-1 text-center lg:text-left animate-slide-in-left">
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">
+              Hi, I'm <span className="text-primary neon-text">{profile.name}</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-slate-600 mb-6">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold">
               {profile.title}
             </p>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               {profile.bio}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToProjects}
-                className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-lg hover:animate-neon-glow transition-all duration-200 font-medium"
               >
-                View My Work
+                View My Apps
               </button>
-              <button className="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 font-medium">
-                Download Resume
+              <button className="glass border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium">
+                Download CV
               </button>
             </div>
           </div>
-          <div className="flex-shrink-0">
-            <img
-              src={profile.profileImageUrl || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400'}
-              alt={`${profile.name} - Professional headshot`}
-              className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl shadow-2xl object-cover"
-            />
+          <div className="flex-shrink-0 animate-slide-in-right">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl blur-xl opacity-30 animate-pulse-slow"></div>
+              <img
+                src={profile.profileImageUrl || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400'}
+                alt={`${profile.name} - Professional headshot`}
+                className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-2xl shadow-2xl object-cover border border-primary/20"
+              />
+              {/* Floating tech icons */}
+              <div className="absolute -top-4 -right-4 glass p-3 rounded-full animate-bounce">
+                <span className="text-2xl">📱</span>
+              </div>
+              <div className="absolute top-1/2 -left-6 glass p-3 rounded-full animate-bounce delay-300">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <div className="absolute -bottom-4 right-1/4 glass p-3 rounded-full animate-bounce delay-700">
+                <span className="text-2xl">🎮</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

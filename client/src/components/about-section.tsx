@@ -45,58 +45,70 @@ export default function AboutSection() {
   }
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-muted/20 relative">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/4 right-1/3 w-48 h-48 bg-accent/30 rounded-full blur-2xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-2xl animate-pulse-slow delay-500"></div>
+      </div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">About Me</h2>
-          <p className="text-lg text-slate-600">Get to know me better</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <p className="text-lg text-muted-foreground">My mobile development journey</p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold text-slate-900 mb-4">My Journey</h3>
-            <p className="text-slate-600 mb-4 leading-relaxed">
-              Started as a computer science student with a passion for creating digital experiences. 
-              Over the years, I've worked with startups and established companies, helping them 
-              build scalable web applications and improve user experiences.
+          <div className="animate-slide-in-left">
+            <h3 className="text-2xl font-semibold text-foreground mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">My Mobile Development Journey</h3>
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Started as a Software Engineering student with a passion for mobile innovation. 
+              Gained hands-on experience during my internship at DevelopersHub.co, where I 
+              collaborated with teams to build cutting-edge mobile solutions.
             </p>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to 
-              open-source projects, or mentoring aspiring developers in my community.
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Now specializing in Flutter development, I create cross-platform mobile apps 
+              that combine beautiful UI/UX with powerful functionality, from AI-powered health 
+              apps to secure steganography tools.
             </p>
             
             <div className="flex flex-wrap gap-3">
-              <span className="bg-blue-100 text-primary px-4 py-2 rounded-full text-sm font-medium">5+ Years Experience</span>
-              <span className="bg-blue-100 text-primary px-4 py-2 rounded-full text-sm font-medium">50+ Projects</span>
-              <span className="bg-blue-100 text-primary px-4 py-2 rounded-full text-sm font-medium">Remote Work Expert</span>
+              <span className="glass border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 transition-colors">6 Week Internship</span>
+              <span className="glass border border-accent/30 text-accent px-4 py-2 rounded-full text-sm font-medium hover:bg-accent/10 transition-colors">5+ Mobile Apps</span>
+              <span className="glass border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 transition-colors">Flutter Expert</span>
             </div>
           </div>
           
-          <div className="space-y-6">
-            <div className="bg-slate-50 p-6 rounded-xl">
+          <div className="space-y-6 animate-slide-in-right">
+            <div className="glass p-6 rounded-xl hover:border-primary/30 transition-all duration-300 group">
               <div className="flex items-center mb-3">
-                <GraduationCap className="text-primary text-xl mr-3" />
-                <h4 className="font-semibold text-slate-900">Education</h4>
+                <div className="p-2 rounded-lg bg-primary/10 mr-3 group-hover:bg-primary/20 transition-colors">
+                  <GraduationCap className="text-primary text-xl" />
+                </div>
+                <h4 className="font-semibold text-foreground">Education</h4>
               </div>
-              <p className="text-slate-600 whitespace-pre-line">{profile.education}</p>
+              <p className="text-muted-foreground whitespace-pre-line text-sm leading-relaxed">{profile.education}</p>
             </div>
             
-            <div className="bg-slate-50 p-6 rounded-xl">
+            <div className="glass p-6 rounded-xl hover:border-accent/30 transition-all duration-300 group">
               <div className="flex items-center mb-3">
-                <Briefcase className="text-primary text-xl mr-3" />
-                <h4 className="font-semibold text-slate-900">Current Role</h4>
+                <div className="p-2 rounded-lg bg-accent/10 mr-3 group-hover:bg-accent/20 transition-colors">
+                  <Briefcase className="text-accent text-xl" />
+                </div>
+                <h4 className="font-semibold text-foreground">Current Focus</h4>
               </div>
-              <p className="text-slate-600 whitespace-pre-line">{profile.currentRole}</p>
+              <p className="text-muted-foreground whitespace-pre-line text-sm leading-relaxed">{profile.currentRole}</p>
             </div>
             
-            <div className="bg-slate-50 p-6 rounded-xl">
+            <div className="glass p-6 rounded-xl hover:border-primary/30 transition-all duration-300 group">
               <div className="flex items-center mb-3">
-                <MapPin className="text-primary text-xl mr-3" />
-                <h4 className="font-semibold text-slate-900">Location</h4>
+                <div className="p-2 rounded-lg bg-primary/10 mr-3 group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="text-primary text-xl" />
+                </div>
+                <h4 className="font-semibold text-foreground">Location</h4>
               </div>
-              <p className="text-slate-600">
+              <p className="text-muted-foreground text-sm">
                 {profile.location}<br />
-                Open to Remote Work
+                <span className="text-accent">Available for Remote Work</span>
               </p>
             </div>
           </div>

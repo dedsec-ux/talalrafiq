@@ -13,34 +13,34 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
+    <nav className="fixed top-0 w-full glass border-b border-border z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl text-primary">AC</div>
+          <div className="font-bold text-xl text-primary neon-text">TR</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-slate-600 hover:text-primary transition-colors duration-200"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:drop-shadow-lg"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="text-slate-600 hover:text-primary transition-colors duration-200"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:drop-shadow-lg"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-slate-600 hover:text-primary transition-colors duration-200"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:drop-shadow-lg"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-slate-600 hover:text-primary transition-colors duration-200"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:drop-shadow-lg"
             >
               Contact
             </button>
@@ -51,35 +51,35 @@ export default function Navigation() {
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Menu className="h-6 w-6 text-slate-600" />
+            <Menu className="h-6 w-6 text-muted-foreground" />
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200">
+          <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-slate-600 hover:text-primary transition-colors duration-200 text-left"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('skills')}
-                className="text-slate-600 hover:text-primary transition-colors duration-200 text-left"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="text-slate-600 hover:text-primary transition-colors duration-200 text-left"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-slate-600 hover:text-primary transition-colors duration-200 text-left"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
               >
                 Contact
               </button>

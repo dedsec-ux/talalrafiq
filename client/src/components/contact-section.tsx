@@ -89,59 +89,65 @@ export default function ContactSection() {
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold text-slate-900 mb-6">Contact Information</h3>
+          <div className="animate-slide-in-left">
+            <h3 className="text-2xl font-semibold text-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Contact Information</h3>
             
             <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                  <Mail className="text-primary text-xl" />
-                </div>
-                <div>
-                  <p className="font-medium text-slate-900">Email</p>
-                  <p className="text-slate-600">{profile?.email}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                  <Phone className="text-primary text-xl" />
-                </div>
-                <div>
-                  <p className="font-medium text-slate-900">Phone</p>
-                  <p className="text-slate-600">{profile?.phone}</p>
+              <div className="glass p-4 rounded-xl hover:border-primary/30 transition-all duration-300 group">
+                <div className="flex items-center">
+                  <div className="bg-primary/10 p-3 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
+                    <Mail className="text-primary text-xl" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-muted-foreground">{profile?.email}</p>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                  <MapPin className="text-primary text-xl" />
+              <div className="glass p-4 rounded-xl hover:border-accent/30 transition-all duration-300 group">
+                <div className="flex items-center">
+                  <div className="bg-accent/10 p-3 rounded-lg mr-4 group-hover:bg-accent/20 transition-colors">
+                    <Phone className="text-accent text-xl" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="text-muted-foreground">{profile?.phone}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-medium text-slate-900">Location</p>
-                  <p className="text-slate-600">{profile?.location}</p>
+              </div>
+              
+              <div className="glass p-4 rounded-xl hover:border-primary/30 transition-all duration-300 group">
+                <div className="flex items-center">
+                  <div className="bg-primary/10 p-3 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
+                    <MapPin className="text-primary text-xl" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Location</p>
+                    <p className="text-muted-foreground">{profile?.location}</p>
+                  </div>
                 </div>
               </div>
             </div>
             
             <div className="mt-8">
-              <h4 className="font-semibold text-slate-900 mb-4">Follow Me</h4>
+              <h4 className="font-semibold text-foreground mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="bg-primary text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  className="glass bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary p-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:animate-neon-glow"
                 >
                   <Linkedin className="text-xl" />
                 </a>
                 <a
                   href="#"
-                  className="bg-slate-800 text-white p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200"
+                  className="glass bg-foreground/10 hover:bg-foreground hover:text-background text-foreground p-3 rounded-lg transition-all duration-200 hover:shadow-lg"
                 >
                   <Github className="text-xl" />
                 </a>
                 <a
                   href="#"
-                  className="bg-blue-400 text-white p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200"
+                  className="glass bg-accent/10 hover:bg-accent hover:text-accent-foreground text-accent p-3 rounded-lg transition-all duration-200 hover:shadow-lg"
                 >
                   <Twitter className="text-xl" />
                 </a>
@@ -149,25 +155,25 @@ export default function ContactSection() {
             </div>
           </div>
           
-          <div>
+          <div className="animate-slide-in-right">
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <Label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                <Label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Full Name
                 </Label>
                 <Input
                   id="name"
                   {...form.register("name")}
                   placeholder="Your full name"
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200"
                 />
                 {form.formState.errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
+                  <p className="text-destructive text-sm mt-1">{form.formState.errors.name.message}</p>
                 )}
               </div>
               
               <div>
-                <Label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                   Email Address
                 </Label>
                 <Input
@@ -175,48 +181,48 @@ export default function ContactSection() {
                   type="email"
                   {...form.register("email")}
                   placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200"
                 />
                 {form.formState.errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.email.message}</p>
+                  <p className="text-destructive text-sm mt-1">{form.formState.errors.email.message}</p>
                 )}
               </div>
               
               <div>
-                <Label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
+                <Label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                   Subject
                 </Label>
                 <Input
                   id="subject"
                   {...form.register("subject")}
-                  placeholder="Project discussion"
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                  placeholder="Mobile app project discussion"
+                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200"
                 />
                 {form.formState.errors.subject && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.subject.message}</p>
+                  <p className="text-destructive text-sm mt-1">{form.formState.errors.subject.message}</p>
                 )}
               </div>
               
               <div>
-                <Label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                <Label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Message
                 </Label>
                 <Textarea
                   id="message"
                   rows={5}
                   {...form.register("message")}
-                  placeholder="Tell me about your project..."
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none"
+                  placeholder="Tell me about your mobile app idea..."
+                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200 resize-none"
                 />
                 {form.formState.errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.message.message}</p>
+                  <p className="text-destructive text-sm mt-1">{form.formState.errors.message.message}</p>
                 )}
               </div>
               
               <Button
                 type="submit"
                 disabled={contactMutation.isPending}
-                className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg hover:shadow-lg hover:animate-neon-glow transition-all duration-200 font-medium disabled:opacity-50"
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
               </Button>

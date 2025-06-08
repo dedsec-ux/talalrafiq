@@ -5,6 +5,7 @@ import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import path from "path";
 import express from "express";
+import { sendContactEmail } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Serve attached assets
@@ -47,12 +48,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSchema.parse(req.body);
+      
+      // Send email notification to Talal's Gmail
+      const emailSent = await sendContactEmail({
+        name: validatedData.name,
+        email: validatedData.email,
+        message: validatedData.message
+      });
+      
+      if (!emailSent) {
+        console.warn("Failed to send email notification");
+      }
+      
       const contact = await storage.createContact(validatedData);
-      res.json({ success: true, message: "Message sent successfully!" });
+      res.json({ success: true, message: "Message sent successfully!", emailSent });
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ error: "Invalid form data", details: error.errors });
       } else {
+        console.error("Contact form error:", error);
         res.status(500).json({ error: "Failed to send message" });
       }
     }

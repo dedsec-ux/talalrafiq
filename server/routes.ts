@@ -7,6 +7,9 @@ import path from "path";
 import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve attached assets
+  app.use('/attached_assets', express.static(path.join(process.cwd(), 'attached_assets')));
+
   // Get profile
   app.get("/api/profile", async (req, res) => {
     try {

@@ -1,0 +1,66 @@
+Talal Rafiq
+M o b i l e A p p D e v e l o p e r
++92 313-5143069 talalrafiq06@gmail.com Multi Garden B-17, Islamabad
+EDUCATION
+PROFILE
+Matric
+Al-Sadiq Public Secondary
+School, Attock City
+(2017 - 2019)
+FCS Pre Engineering
+Cadet College Attock
+(2019 - 2021)
+BS Software Engineering
+SS-CASE-IT, Islamabad
+th
+7 Semester
+(2021 - Ongoing)
+SKILLS
+Flutter & Dart
+API Intergration & Firebase
+Flames
+Android SDK & Native Features
+Git & VS-Code
+AI Model Training
+Communication Skills
+Problem Solving
+LANGUAGE
+English
+Urdu
+Dedicated Flutter developer with a strong focus on Android app
+development. Gained hands-on experience during a 6-week
+internship at DevelopersHub.co , where I contributed to client
+projects and collaborated in a team-based development
+environment. Following the internship, successfully transitioned into
+independent development , managing full-cycle Flutter projects from
+concept to deployment.
+WORK EXPERIENCE
+Windows LMS
+Developed a Windows-based Flutter application, featuring a custom quiz
+generation model and integrated plagiarism detection. The system allows
+teachers to create and manage quizzes, while students can attempt them online
+with results tracked in real time. Built using Flutter , Dart , SupaBase and Firebase ,
+the app supports seamless data synchronization, user authentication, and secure
+content delivery.
+E-commerce Mobile App
+Developed a Flutter-based Android application that allows users to upload and
+sell items such as clothes, jewelry, and more across multiple categories. The app
+enables product browsing, item listing, and order placement. Includes a fully
+functional admin panel for managing listings and real-time order tracking .
+Skin Cancer Mobile App
+Developed a Flutter-based Android application that uses a trained AI model to
+help users detect potential skin cancer by analyzing uploaded images. The app
+provides preliminary results and allows users to connect with available doctors for
+consultation via an in-app chat feature. Includes an admin panel for managing
+doctor profiles and viewing user information.
+StegoCrypt Mobile App
+Developed a Flutter-based steganography app for secure data concealment,
+featuring a cyberpunk neon-glitch UI. Implemented AES-GCM encryption, PBKDF2
+key derivation, and LSB steganography to embed/decrypt messages in images.
+Included three modes, a dynamic splash screen, and a copyable ciphertext
+feature.
+CURRENT PROJECT
+Blocky Hero Saga
+Currently developing a 2D arcade-style game using Flutter with the Flame game
+engine and Tiled for level design. The game is inspired by Snow Bros , featuring
+player controls, enemy interactions, scoring mechanics, and custom-built levels.

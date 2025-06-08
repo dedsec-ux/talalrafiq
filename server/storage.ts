@@ -56,13 +56,13 @@ export class MemStorage implements IStorage {
       id: 1,
       name: "Talal Rafiq",
       title: "Mobile App Developer",
-      bio: "Dedicated Flutter developer with a strong focus on Android app development. Gained hands-on experience during a 6-week internship at DevelopersHub.co, where I contributed to client projects and collaborated in a team-based development environment. Following the internship, successfully transitioned into independent development, managing full-cycle Flutter projects from concept to deployment.",
+      bio: "Passionate Flutter developer crafting innovative mobile experiences. Specialized in cross-platform app development with expertise in Firebase integration, AI/ML implementation, and secure data handling. Currently building cutting-edge solutions from e-commerce platforms to health-tech applications.",
       email: "talalrafiq06@gmail.com",
       phone: "+92 313-5143069",
       location: "Multi Garden B-17, Islamabad",
       education: "BS Software Engineering\nSS-CASE-IT, Islamabad\n7th Semester (2021 - Ongoing)\n\nFCS Pre Engineering\nCadet College Attock (2019 - 2021)\n\nMatric\nAl-Sadiq Public Secondary School, Attock City (2017 - 2019)",
       currentRole: "Independent Mobile App Developer\nFreelance Flutter Development",
-      profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+      profileImageUrl: "/attached_assets/F1139420-CC1B-4111-9D9C-3673BB72DDD2_1749393529210.jpg"
     };
     this.profiles.set(1, defaultProfile);
 
@@ -74,7 +74,7 @@ export class MemStorage implements IStorage {
       { id: 4, category: "Backend", name: "Firebase", level: "Expert", percentage: 90 },
       { id: 5, category: "Backend", name: "SupaBase", level: "Advanced", percentage: 85 },
       { id: 6, category: "Backend", name: "API Integration", level: "Expert", percentage: 90 },
-      { id: 7, category: "Game Dev", name: "Flame Engine", level: "Advanced", percentage: 75 },
+      { id: 7, category: "Game Dev", name: "Flame Engine", level: "Beginner", percentage: 40 },
       { id: 8, category: "AI/ML", name: "AI Model Training", level: "Intermediate", percentage: 70 },
       { id: 9, category: "Tools", name: "Git & VS Code", level: "Expert", percentage: 95 },
       { id: 10, category: "Skills", name: "Problem Solving", level: "Expert", percentage: 95 },
@@ -119,7 +119,7 @@ export class MemStorage implements IStorage {
         id: 4,
         title: "StegoCrypt Mobile App",
         description: "Developed a Flutter-based steganography app for secure data concealment, featuring a cyberpunk neon-glitch UI. Implemented AES-GCM encryption, PBKDF2 key derivation, and LSB steganography to embed/decrypt messages in images. Included three modes, a dynamic splash screen, and a copyable ciphertext feature.",
-        imageUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        imageUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         technologies: ["Flutter", "Encryption", "Steganography", "Cyberpunk UI"],
         liveUrl: null,
         codeUrl: null,

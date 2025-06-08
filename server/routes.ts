@@ -3,6 +3,8 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import path from "path";
+import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Get profile

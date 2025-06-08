@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import type { Profile } from "@shared/schema";
+import profileImage from "@assets/F1139420-CC1B-4111-9D9C-3673BB72DDD2_1749393529210.jpg";
 
 export default function HeroSection() {
   const { data: profile, isLoading } = useQuery<Profile>({
@@ -69,16 +70,20 @@ export default function HeroSection() {
               >
                 View My Apps
               </button>
-              <button className="glass border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium">
+              <a 
+                href="/attached_assets/Minimalist Modern Professional CV Resume (1)_1749393567484.pdf" 
+                download="Talal_Rafiq_CV.pdf"
+                className="glass border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium inline-block text-center"
+              >
                 Download CV
-              </button>
+              </a>
             </div>
           </div>
           <div className="flex-shrink-0 animate-slide-in-right">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl blur-xl opacity-30 animate-pulse-slow"></div>
               <img
-                src={profile.profileImageUrl || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400'}
+                src={profile.profileImageUrl || profileImage}
                 alt={`${profile.name} - Professional headshot`}
                 className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-2xl shadow-2xl object-cover border border-primary/20"
               />

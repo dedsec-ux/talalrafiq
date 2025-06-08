@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactSchema } from "@shared/schema";
 import type { Profile, InsertContact } from "@shared/schema";
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -134,22 +134,28 @@ export default function ContactSection() {
               <h4 className="font-semibold text-foreground mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/talal-rafiq-8bb8b9275/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary p-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:animate-neon-glow"
                 >
                   <Linkedin className="text-xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/dedsec-ux"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass bg-foreground/10 hover:bg-foreground hover:text-background text-foreground p-3 rounded-lg transition-all duration-200 hover:shadow-lg"
                 >
                   <Github className="text-xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/itx_txr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass bg-accent/10 hover:bg-accent hover:text-accent-foreground text-accent p-3 rounded-lg transition-all duration-200 hover:shadow-lg"
                 >
-                  <Twitter className="text-xl" />
+                  <Instagram className="text-xl" />
                 </a>
               </div>
             </div>

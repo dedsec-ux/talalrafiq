@@ -75,14 +75,14 @@ export default function ProjectsSection() {
       </div>
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Featured Mobile Apps</h2>
-          <p className="text-lg text-muted-foreground">Innovative solutions built with Flutter</p>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 animate-glow">Featured Mobile <span className="text-primary neon-text animate-wiggle">Apps</span></h2>
+          <p className="text-lg text-muted-foreground animate-slide-in-up">Innovative solutions built with Flutter</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="glass rounded-xl hover:shadow-2xl hover:border-primary/50 transition-all duration-500 overflow-hidden group">
+            <div key={project.id} className="glass rounded-xl hover:shadow-2xl hover:border-primary/50 transition-all duration-500 overflow-hidden group animate-scale-in animate-bounce-slow">
               <div className="relative">
                 <img
                   src={project.imageUrl}

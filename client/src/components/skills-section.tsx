@@ -71,8 +71,8 @@ export default function SkillsSection() {
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 animate-glow">Skills & <span className="text-primary neon-text animate-wiggle">Expertise</span></h2>
-          <p className="text-lg text-muted-foreground animate-slide-in-up">Technologies I master for mobile innovation</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 hover:animate-glow transition-all duration-300">Skills & <span className="text-primary neon-text hover:animate-wiggle">Expertise</span></h2>
+          <p className="text-lg text-muted-foreground hover:text-primary transition-colors duration-300">Technologies I master for mobile innovation</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,7 +80,7 @@ export default function SkillsSection() {
             const IconComponent = categoryIcons[category as keyof typeof categoryIcons] || Settings;
             
             return (
-              <div key={category} className="glass p-8 rounded-xl hover:shadow-xl hover:border-primary/30 transition-all duration-300 group animate-scale-in animate-bounce-slow">
+              <div key={category} className="glass p-8 rounded-xl hover:shadow-xl hover:border-primary/30 transition-all duration-300 group animate-scale-in hover:scale-105">
                 <div className="text-center mb-6">
                   <div className="inline-flex p-4 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors animate-rotate-slow">
                     <IconComponent className="text-primary text-3xl group-hover:scale-110 transition-transform animate-wiggle" />

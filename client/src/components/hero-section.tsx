@@ -54,10 +54,10 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left animate-slide-in-left">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4 animate-glow">
-              Hi, I'm <span className="text-primary neon-text animate-wiggle">{profile.name}</span>
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4 hover:animate-glow transition-all duration-300">
+              Hi, I'm <span className="text-primary neon-text hover:animate-wiggle">{profile.name}</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold animate-bounce-slow">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold hover:scale-105 transition-transform duration-300">
               {profile.title}
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">

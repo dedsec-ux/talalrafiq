@@ -29,24 +29,26 @@ export default function Home() {
   };
 
   return (
-    <div className="font-sans bg-slate-50 text-slate-800">
-      <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-      <Footer />
-      
-      {/* Scroll to top button */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 ${
-          showScrollTop ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <ArrowUp className="w-6 h-6" />
-      </button>
+    <div className="font-sans bg-background text-foreground min-h-screen">
+      <div className="grid-bg">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+        <Footer />
+        
+        {/* Scroll to top button */}
+        <button
+          onClick={scrollToTop}
+          className={`fixed bottom-8 right-8 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:shadow-xl hover:animate-neon-glow transition-all duration-200 ${
+            showScrollTop ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          <ArrowUp className="w-6 h-6" />
+        </button>
+      </div>
     </div>
   );
 }

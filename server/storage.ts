@@ -54,68 +54,90 @@ export class MemStorage implements IStorage {
     // Create default profile
     const defaultProfile: Profile = {
       id: 1,
-      name: "Alex Chen",
-      title: "Full Stack Developer & UI/UX Designer",
-      bio: "I create beautiful, functional web applications that solve real-world problems. With 5+ years of experience in modern web technologies, I help businesses build their digital presence.",
-      email: "alex.chen@email.com",
-      phone: "+1 (555) 123-4567",
-      location: "San Francisco, CA",
-      education: "B.S. Computer Science\nUniversity of California, Berkeley",
-      currentRole: "Senior Full Stack Developer\nTech Innovations Inc.",
+      name: "Talal Rafiq",
+      title: "Mobile App Developer",
+      bio: "Dedicated Flutter developer with a strong focus on Android app development. Gained hands-on experience during a 6-week internship at DevelopersHub.co, where I contributed to client projects and collaborated in a team-based development environment. Following the internship, successfully transitioned into independent development, managing full-cycle Flutter projects from concept to deployment.",
+      email: "talalrafiq06@gmail.com",
+      phone: "+92 313-5143069",
+      location: "Multi Garden B-17, Islamabad",
+      education: "BS Software Engineering\nSS-CASE-IT, Islamabad\n7th Semester (2021 - Ongoing)\n\nFCS Pre Engineering\nCadet College Attock (2019 - 2021)\n\nMatric\nAl-Sadiq Public Secondary School, Attock City (2017 - 2019)",
+      currentRole: "Independent Mobile App Developer\nFreelance Flutter Development",
       profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
     };
     this.profiles.set(1, defaultProfile);
 
     // Create default skills
     const defaultSkills: Skill[] = [
-      { id: 1, category: "Frontend", name: "React/Next.js", level: "Expert", percentage: 92 },
-      { id: 2, category: "Frontend", name: "TypeScript", level: "Advanced", percentage: 85 },
-      { id: 3, category: "Frontend", name: "Tailwind CSS", level: "Expert", percentage: 92 },
-      { id: 4, category: "Backend", name: "Node.js", level: "Expert", percentage: 85 },
-      { id: 5, category: "Backend", name: "Python", level: "Advanced", percentage: 80 },
-      { id: 6, category: "Backend", name: "PostgreSQL", level: "Advanced", percentage: 80 },
-      { id: 7, category: "Tools", name: "Git/GitHub", level: "Expert", percentage: 92 },
-      { id: 8, category: "Tools", name: "Docker", level: "Advanced", percentage: 80 },
-      { id: 9, category: "Tools", name: "AWS", level: "Intermediate", percentage: 60 },
+      { id: 1, category: "Mobile", name: "Flutter & Dart", level: "Expert", percentage: 95 },
+      { id: 2, category: "Mobile", name: "Android SDK", level: "Advanced", percentage: 85 },
+      { id: 3, category: "Mobile", name: "Native Features", level: "Advanced", percentage: 80 },
+      { id: 4, category: "Backend", name: "Firebase", level: "Expert", percentage: 90 },
+      { id: 5, category: "Backend", name: "SupaBase", level: "Advanced", percentage: 85 },
+      { id: 6, category: "Backend", name: "API Integration", level: "Expert", percentage: 90 },
+      { id: 7, category: "Game Dev", name: "Flame Engine", level: "Advanced", percentage: 75 },
+      { id: 8, category: "AI/ML", name: "AI Model Training", level: "Intermediate", percentage: 70 },
+      { id: 9, category: "Tools", name: "Git & VS Code", level: "Expert", percentage: 95 },
+      { id: 10, category: "Skills", name: "Problem Solving", level: "Expert", percentage: 95 },
+      { id: 11, category: "Skills", name: "Communication", level: "Advanced", percentage: 85 },
     ];
     defaultSkills.forEach(skill => this.skills.set(skill.id, skill));
-    this.currentSkillId = 10;
+    this.currentSkillId = 12;
 
     // Create default projects
     const defaultProjects: Project[] = [
       {
         id: 1,
-        title: "E-commerce Dashboard",
-        description: "A comprehensive admin dashboard for managing online stores with real-time analytics and inventory management.",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-        technologies: ["React", "Node.js", "MongoDB"],
-        liveUrl: "#",
-        codeUrl: "#",
+        title: "Windows LMS",
+        description: "Developed a Windows-based Flutter application, featuring a custom quiz generation model and integrated plagiarism detection. The system allows teachers to create and manage quizzes, while students can attempt them online with results tracked in real time. Built using Flutter, Dart, SupaBase and Firebase.",
+        imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        technologies: ["Flutter", "Dart", "SupaBase", "Firebase"],
+        liveUrl: null,
+        codeUrl: null,
         featured: 1
       },
       {
         id: 2,
-        title: "Fitness Tracker App",
-        description: "Mobile fitness application with workout tracking, progress analytics, and social features for motivation.",
-        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-        technologies: ["React Native", "Firebase", "Redux"],
-        liveUrl: "#",
-        codeUrl: "#",
+        title: "E-commerce Mobile App",
+        description: "Developed a Flutter-based Android application that allows users to upload and sell items such as clothes, jewelry, and more across multiple categories. The app enables product browsing, item listing, and order placement. Includes a fully functional admin panel for managing listings and real-time order tracking.",
+        imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        technologies: ["Flutter", "Dart", "Firebase", "Admin Panel"],
+        liveUrl: null,
+        codeUrl: null,
         featured: 1
       },
       {
         id: 3,
-        title: "Task Management System",
-        description: "Collaborative project management tool with kanban boards, team collaboration, and deadline tracking.",
-        imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-        technologies: ["Vue.js", "Express", "MySQL"],
-        liveUrl: "#",
-        codeUrl: "#",
+        title: "Skin Cancer Mobile App",
+        description: "Developed a Flutter-based Android application that uses a trained AI model to help users detect potential skin cancer by analyzing uploaded images. The app provides preliminary results and allows users to connect with available doctors for consultation via an in-app chat feature.",
+        imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        technologies: ["Flutter", "AI/ML", "Chat Feature", "Admin Panel"],
+        liveUrl: null,
+        codeUrl: null,
         featured: 1
+      },
+      {
+        id: 4,
+        title: "StegoCrypt Mobile App",
+        description: "Developed a Flutter-based steganography app for secure data concealment, featuring a cyberpunk neon-glitch UI. Implemented AES-GCM encryption, PBKDF2 key derivation, and LSB steganography to embed/decrypt messages in images. Included three modes, a dynamic splash screen, and a copyable ciphertext feature.",
+        imageUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        technologies: ["Flutter", "Encryption", "Steganography", "Cyberpunk UI"],
+        liveUrl: null,
+        codeUrl: null,
+        featured: 1
+      },
+      {
+        id: 5,
+        title: "Blocky Hero Saga",
+        description: "Currently developing a 2D arcade-style game using Flutter with the Flame game engine and Tiled for level design. The game is inspired by Snow Bros, featuring player controls, enemy interactions, scoring mechanics, and custom-built levels.",
+        imageUrl: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        technologies: ["Flutter", "Flame Engine", "Tiled", "Game Development"],
+        liveUrl: null,
+        codeUrl: null,
+        featured: 0
       }
     ];
     defaultProjects.forEach(project => this.projects.set(project.id, project));
-    this.currentProjectId = 4;
+    this.currentProjectId = 6;
   }
 
   async getProfile(): Promise<Profile | undefined> {

@@ -58,7 +58,7 @@ export default function Footer() {
           
           <div className="border-t border-border pt-8">
             <p className="text-muted-foreground text-sm">
-              © 2024 {profile?.name || "Talal Rafiq"}. All rights reserved. Built with <span className="text-primary">Flutter</span> passion and futuristic design.
+              © 2025 {profile?.name || "Talal Rafiq"}. All rights reserved.
             </p>
           </div>
         </div>

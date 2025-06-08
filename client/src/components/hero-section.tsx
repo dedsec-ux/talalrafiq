@@ -54,10 +54,10 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left animate-slide-in-left">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4">
-              Hi, I'm <span className="text-primary neon-text">{profile.name}</span>
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-4 animate-glow">
+              Hi, I'm <span className="text-primary neon-text animate-wiggle">{profile.name}</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold animate-bounce-slow">
               {profile.title}
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -66,14 +66,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToProjects}
-                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-lg hover:animate-neon-glow transition-all duration-200 font-medium"
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-lg hover:animate-neon-glow transition-all duration-200 font-medium animate-scale-in"
               >
                 View My Apps
               </button>
               <a 
                 href="/attached_assets/Minimalist Modern Professional CV Resume (1)_1749393567484.pdf" 
                 download="Talal_Rafiq_CV.pdf"
-                className="glass border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium inline-block text-center"
+                className="glass border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium inline-block text-center animate-wiggle"
               >
                 Download CV
               </a>

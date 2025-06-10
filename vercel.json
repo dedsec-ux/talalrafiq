@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  // This file is for monorepo project structure. Import both client and server as separate projects in Vercel.
+  // For custom routing or serverless functions, add a vercel.json in the respective directory (client or server) as needed.
+  "projects": {
+    // Example: You will set the root directory to client/ or server/ when importing in Vercel dashboard.
+  }
+} 

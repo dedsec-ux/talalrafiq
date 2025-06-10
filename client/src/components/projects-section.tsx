@@ -68,21 +68,19 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-background relative">
-      <div className="absolute inset-0 opacity-5">
+    <section id="projects" className="py-20 bg-background relative animate-fade-in">
+      <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
         <div className="absolute top-20 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-slow delay-700"></div>
       </div>
-      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 hover:animate-glow transition-all duration-300">Featured Mobile <span className="text-primary neon-text hover:animate-wiggle">Apps</span></h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 hover:animate-glow transition-all duration-300 drop-shadow-lg">Featured Mobile <span className="text-primary neon-text hover:animate-wiggle">Apps</span></h2>
           <p className="text-lg text-muted-foreground hover:text-primary transition-colors duration-300">Innovative solutions built with Flutter</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="glass rounded-xl hover:shadow-2xl hover:border-primary/50 transition-all duration-500 overflow-hidden group animate-scale-in hover:scale-105">
+            <div key={project.id} className="glass rounded-xl hover:shadow-2xl hover:border-primary/50 transition-all duration-500 overflow-hidden group animate-scale-in hover:scale-105 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-2">
               <div className="relative">
                 <img
                   src={project.imageUrl}
@@ -90,18 +88,18 @@ export default function ProjectsSection() {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4 glass px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 glass px-3 py-1 rounded-full shadow-md">
                   <span className="text-primary text-sm font-medium">Mobile App</span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-semibold text-xl text-foreground mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
+                <h3 className="font-semibold text-xl text-foreground mb-3 group-hover:text-primary transition-colors drop-shadow">{project.title}</h3>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className={`px-3 py-1 rounded-full text-xs font-medium border transition-all duration-200 hover:scale-105 ${getTechnologyColor(tech)}`}
+                      className={`px-3 py-1 rounded-full text-xs font-medium border transition-all duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 ${getTechnologyColor(tech)}`}
                     >
                       {tech}
                     </span>
@@ -111,7 +109,7 @@ export default function ProjectsSection() {
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
-                      className="text-primary hover:text-primary/80 font-medium text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                      className="text-primary hover:text-primary/80 font-medium text-sm flex items-center gap-2 hover:gap-3 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View App
@@ -120,7 +118,7 @@ export default function ProjectsSection() {
                   {project.codeUrl && (
                     <a
                       href={project.codeUrl}
-                      className="text-muted-foreground hover:text-foreground font-medium text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                      className="text-muted-foreground hover:text-foreground font-medium text-sm flex items-center gap-2 hover:gap-3 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
                     >
                       <Github className="w-4 h-4" />
                       Source Code
@@ -131,11 +129,15 @@ export default function ProjectsSection() {
             </div>
           ))}
         </div>
-        
         <div className="text-center mt-12">
-          <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-lg hover:animate-neon-glow transition-all duration-200 font-medium">
+          <a
+            href="https://github.com/dedsec-ux"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-xl hover:animate-neon-glow transition-all duration-200 font-bold inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+          >
             View All Mobile Apps
-          </button>
+          </a>
         </div>
       </div>
     </section>

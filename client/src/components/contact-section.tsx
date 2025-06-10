@@ -76,163 +76,77 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/30 relative">
-      <div className="absolute inset-0 opacity-10">
+    <section id="contact" className="min-h-screen flex items-center justify-center bg-muted/30 relative animate-fade-in">
+      <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
       </div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 drop-shadow-lg">Get In Touch</h2>
           <p className="text-lg text-muted-foreground">Let's build the next mobile innovation together</p>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="animate-slide-in-left">
+        <div className="flex flex-col space-y-12 max-w-xl mx-auto">
+          <div className="animate-slide-in-left text-left">
             <h3 className="text-2xl font-semibold text-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <div className="glass p-4 rounded-xl hover:border-primary/30 transition-all duration-300 group">
-                <div className="flex items-center">
-                  <div className="bg-primary/10 p-3 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
-                    <Mail className="text-primary text-xl" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">{profile?.email}</p>
-                  </div>
+            <div className="flex flex-col gap-6 w-full">
+              <div className="glass p-4 rounded-xl flex items-center gap-4 shadow-lg hover:shadow-primary/20 transition-all duration-300 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-2">
+                <div className="bg-primary/10 p-3 rounded-lg">
+                  <Mail className="text-primary text-xl" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Email</p>
+                  <p className="text-muted-foreground break-all">{profile?.email}</p>
                 </div>
               </div>
-              
-              <div className="glass p-4 rounded-xl hover:border-accent/30 transition-all duration-300 group">
-                <div className="flex items-center">
-                  <div className="bg-accent/10 p-3 rounded-lg mr-4 group-hover:bg-accent/20 transition-colors">
-                    <Phone className="text-accent text-xl" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">{profile?.phone}</p>
-                  </div>
+              <div className="glass p-4 rounded-xl flex items-center gap-4 shadow-lg hover:shadow-accent/20 transition-all duration-300 focus-within:outline focus-within:outline-2 focus-within:outline-accent focus-within:outline-offset-2">
+                <div className="bg-accent/10 p-3 rounded-lg">
+                  <Phone className="text-accent text-xl" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Phone</p>
+                  <p className="text-muted-foreground">{profile?.phone}</p>
                 </div>
               </div>
-              
-              <div className="glass p-4 rounded-xl hover:border-primary/30 transition-all duration-300 group">
-                <div className="flex items-center">
-                  <div className="bg-primary/10 p-3 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
-                    <MapPin className="text-primary text-xl" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">{profile?.location}</p>
-                  </div>
+              <div className="glass p-4 rounded-xl flex items-center gap-4 shadow-lg hover:shadow-primary/20 transition-all duration-300 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-2">
+                <div className="bg-primary/10 p-3 rounded-lg">
+                  <MapPin className="text-primary text-xl" />
                 </div>
-              </div>
-            </div>
-            
-            <div className="mt-8">
-              <h4 className="font-semibold text-foreground mb-4">Connect With Me</h4>
-              <div className="flex space-x-4">
-                <a
-                  href="https://www.linkedin.com/in/talal-rafiq-8bb8b9275/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary p-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:animate-neon-glow"
-                >
-                  <Linkedin className="text-xl" />
-                </a>
-                <a
-                  href="https://github.com/dedsec-ux"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass bg-foreground/10 hover:bg-foreground hover:text-background text-foreground p-3 rounded-lg transition-all duration-200 hover:shadow-lg"
-                >
-                  <Github className="text-xl" />
-                </a>
-                <a
-                  href="https://www.instagram.com/itx_txr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass bg-accent/10 hover:bg-accent hover:text-accent-foreground text-accent p-3 rounded-lg transition-all duration-200 hover:shadow-lg"
-                >
-                  <Instagram className="text-xl" />
-                </a>
+                <div>
+                  <p className="font-medium text-foreground">Location</p>
+                  <p className="text-muted-foreground">{profile?.location}</p>
+                </div>
               </div>
             </div>
           </div>
-          
-          <div className="animate-slide-in-right">
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <Label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Full Name
-                </Label>
-                <Input
-                  id="name"
-                  {...form.register("name")}
-                  placeholder="Your full name"
-                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200"
-                />
-                {form.formState.errors.name && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.name.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email Address
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  {...form.register("email")}
-                  placeholder="your.email@example.com"
-                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200"
-                />
-                {form.formState.errors.email && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.email.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Subject
-                </Label>
-                <Input
-                  id="subject"
-                  {...form.register("subject")}
-                  placeholder="Mobile app project discussion"
-                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200"
-                />
-                {form.formState.errors.subject && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.subject.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </Label>
-                <Textarea
-                  id="message"
-                  rows={5}
-                  {...form.register("message")}
-                  placeholder="Tell me about your mobile app idea..."
-                  className="w-full glass px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background/50 text-foreground placeholder:text-muted-foreground transition-all duration-200 resize-none"
-                />
-                {form.formState.errors.message && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.message.message}</p>
-                )}
-              </div>
-              
-              <Button
-                type="submit"
-                disabled={contactMutation.isPending}
-                className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg hover:shadow-lg hover:animate-neon-glow transition-all duration-200 font-medium disabled:opacity-50"
+          <div className="animate-slide-in-left text-left">
+            <h3 className="text-2xl font-semibold text-foreground mb-6 bg-gradient-to-r from-teal-500 to-emerald-600 bg-clip-text text-transparent">Connect With Me</h3>
+            <div className="flex space-x-6">
+              <a
+                href="https://www.linkedin.com/in/talal-rafiq-8bb8b9275/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary p-3 rounded-lg transition-all duration-200 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
+                <Linkedin className="text-xl" />
+              </a>
+              <a
+                href="https://github.com/dedsec-ux"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass bg-accent/10 hover:bg-accent hover:text-accent-foreground text-accent p-3 rounded-lg transition-all duration-200 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                <Github className="text-xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/itx_txr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass bg-accent/10 hover:bg-accent hover:text-accent-foreground text-accent p-3 rounded-lg transition-all duration-200 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                <Instagram className="text-xl" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -45,18 +45,16 @@ export default function AboutSection() {
   }
 
   return (
-    <section id="about" className="py-20 bg-muted/20 relative">
-      <div className="absolute inset-0 opacity-10">
+    <section id="about" className="py-20 bg-muted/20 relative animate-fade-in">
+      <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <div className="absolute top-1/4 right-1/3 w-48 h-48 bg-accent/30 rounded-full blur-2xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-2xl animate-pulse-slow delay-500"></div>
       </div>
-      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 drop-shadow-lg">About Me</h2>
           <p className="text-lg text-muted-foreground">My mobile development journey</p>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <h3 className="text-2xl font-semibold text-foreground mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">My Mobile Development Journey</h3>
@@ -70,16 +68,14 @@ export default function AboutSection() {
               that combine beautiful UI/UX with powerful functionality, from AI-powered health 
               apps to secure steganography tools.
             </p>
-            
             <div className="flex flex-wrap gap-3">
-              <span className="glass border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 transition-colors">6 Week Internship</span>
-              <span className="glass border border-accent/30 text-accent px-4 py-2 rounded-full text-sm font-medium hover:bg-accent/10 transition-colors">5+ Mobile Apps</span>
-              <span className="glass border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 transition-colors">Flutter Expert</span>
+              <span className="glass border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 shadow-md">6 Week Internship</span>
+              <span className="glass border border-accent/30 text-accent px-4 py-2 rounded-full text-sm font-medium hover:bg-accent/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 shadow-md">5+ Mobile Apps</span>
+              <span className="glass border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 shadow-md">Flutter Expert</span>
             </div>
           </div>
-          
           <div className="space-y-6 animate-slide-in-right">
-            <div className="glass p-6 rounded-xl hover:border-primary/30 transition-all duration-300 group">
+            <div className="glass p-6 rounded-xl hover:border-primary/30 transition-all duration-300 group shadow-lg hover:shadow-primary/20 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-2">
               <div className="flex items-center mb-3">
                 <div className="p-2 rounded-lg bg-primary/10 mr-3 group-hover:bg-primary/20 transition-colors">
                   <GraduationCap className="text-primary text-xl" />
@@ -88,8 +84,7 @@ export default function AboutSection() {
               </div>
               <p className="text-muted-foreground whitespace-pre-line text-sm leading-relaxed">{profile.education}</p>
             </div>
-            
-            <div className="glass p-6 rounded-xl hover:border-accent/30 transition-all duration-300 group">
+            <div className="glass p-6 rounded-xl hover:border-accent/30 transition-all duration-300 group shadow-lg hover:shadow-accent/20 focus-within:outline focus-within:outline-2 focus-within:outline-accent focus-within:outline-offset-2">
               <div className="flex items-center mb-3">
                 <div className="p-2 rounded-lg bg-accent/10 mr-3 group-hover:bg-accent/20 transition-colors">
                   <Briefcase className="text-accent text-xl" />
@@ -98,8 +93,7 @@ export default function AboutSection() {
               </div>
               <p className="text-muted-foreground whitespace-pre-line text-sm leading-relaxed">{profile.currentRole}</p>
             </div>
-            
-            <div className="glass p-6 rounded-xl hover:border-primary/30 transition-all duration-300 group">
+            <div className="glass p-6 rounded-xl hover:border-primary/30 transition-all duration-300 group shadow-lg hover:shadow-primary/20 focus-within:outline focus-within:outline-2 focus-within:outline-primary focus-within:outline-offset-2">
               <div className="flex items-center mb-3">
                 <div className="p-2 rounded-lg bg-primary/10 mr-3 group-hover:bg-primary/20 transition-colors">
                   <MapPin className="text-primary text-xl" />
